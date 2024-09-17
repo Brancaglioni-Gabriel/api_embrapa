@@ -17,4 +17,4 @@ def teste():
         )
     ) 
 
-app.run()
+app.run(port='0.0.0.0')
