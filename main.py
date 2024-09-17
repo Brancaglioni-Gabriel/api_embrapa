@@ -9,12 +9,12 @@ def hello_world():
     return 'Hello World!!!'
 
 
-#@app.route('/inicio', methods=['GET'])
-#def teste():
-#    return make_response(
-#        jsonify(
-#            teste.info
-#        )
-#    ) 
+@app.route('/inicio', methods=['GET'])
+def teste():
+    return make_response(
+        jsonify(
+            teste.info
+        )
+    ) 
 
-#app.run(port='0.0.0.0')
+app.run()
