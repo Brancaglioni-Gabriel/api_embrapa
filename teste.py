@@ -1,4 +1,4 @@
-info = [
+Dados = [
     {
     'api': 'funciona',
     'chave': 1

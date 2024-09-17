@@ -1,5 +1,5 @@
 from flask import Flask, make_response, jsonify
-import teste
+from teste import Dados
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def hello_world():
 def teste():
     return make_response(
         jsonify(
-            teste.info
+            Dados
         )
     ) 
 
