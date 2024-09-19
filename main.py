@@ -10,11 +10,14 @@ def hello_world():
 
 
 @app.route('/inicio', methods=['GET'])
-def teste():
-    return make_response(
-        jsonify(
-            Dados
+def teste(tipo):
+    if tipo != 'todos':
+        return make_response(
+            jsonify(
+                Dados
+            )
         )
-    ) 
+    else:
+        return 'Obrigado' 
 
 app.run(port=10000, host='0.0.0.0')
