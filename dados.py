@@ -25,3 +25,7 @@ def load_transpose_data(link):
     base = base.melt(id_vars=['id', 'control', 'produto'], var_name='ano', value_name='quantidade')
     base_json = json.loads(base.to_json(orient='records', force_ascii=False))
     return base_json
+
+#link = single_page()
+#for elemento in load_transpose_data(link):
+#    print(elemento)

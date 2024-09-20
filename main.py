@@ -41,9 +41,7 @@ def teste_sub(tipo, sub_pagina):
 def valores():
     link = dados.single_page()
     resultado = dados.load_transpose_data(link)
-    return make_response(
-                resultado
-        )
-
+    return resultado
+    
 
 app.run(port=10000, host='0.0.0.0')
