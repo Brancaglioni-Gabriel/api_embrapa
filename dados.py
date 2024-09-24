@@ -20,12 +20,19 @@ def single_page():
         print('Erro pagina invalida')
 
 
-def load_transpose_data(link):
+def load_transpose_data(link, ano, quantidade):
     base = pd.read_csv(link, sep=';', encoding = 'utf8')
     base = base.melt(id_vars=['id', 'control', 'produto'], var_name='ano', value_name='quantidade')
-    base_json = json.loads(base.to_json(orient='records', force_ascii=False))
-    return base_json
+    base['ano'] = base['ano'].astype(int)
+    if ano is not None:
+      base.query(f'ano == {ano}', inplace=True)
+    if quantidade is not None:
+      base.query(f'quantidade > {quantidade}', inplace=True)
+    base = json.loads(base.to_json(orient='records'))
+    #base = json.dumps(base, ensure_ascii=, indent=4)   
+    return base
 
-#link = single_page()
+
+
 #for elemento in load_transpose_data(link):
 #    print(elemento)
