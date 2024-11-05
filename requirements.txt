@@ -1,3 +1,6 @@
 pandas
 Flask
 Gunicorn
+requests
+json
+bs4
