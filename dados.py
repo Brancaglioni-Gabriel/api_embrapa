@@ -60,3 +60,7 @@ def load_transpose_data_double(link, sep, id, ano, quilos, valor):
       base.query(f'valor > {valor}', inplace=True)
     base = json.loads(base.to_json(orient='records')) 
     return base
+
+#site = 'http://vitibrasil.cnpuv.embrapa.br/index.php?opcao=opt_02'
+#link = get_link(site)
+#print(load_transpose_data(link, ';', None, None, None, 'years'))
